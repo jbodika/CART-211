@@ -1,3 +1,15 @@
-body{
-    background-color: antiquewhite !important;
+body {
+    background-color: #1D2038 !important;
+    background-image: url("../assets/images/giphy.webp");
+    font-family: 'Rowdies';
+    overflow-x: hidden;
+}
+
+.main-btn {
+    background-color: #D9EFEF;
+    font-size: 50px;
+    border-radius: 2em;
+    border-width: 10px;
+    border-color: #1D2038;
+    color: #1D2038;
 }
