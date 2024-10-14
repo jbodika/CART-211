@@ -13,3 +13,13 @@ body {
     border-color: #1D2038;
     color: #1D2038;
 }
+
+.story-item{
+    background-color: #D9EFEF;
+    padding: 40px;
+    margin: 20px; 
+    border-radius: 2em;
+    border-width: 10px;
+    border-color: #1D2038;
+    color: #1D2038;
+}
