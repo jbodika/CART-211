@@ -1,5 +1,5 @@
 
-// Your web app's Firebase configuration
+//Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDCNbOigX073RJrRWWUPE9tUH-52PJKcW4",
     authDomain: "dabl-95a47.firebaseapp.com",
@@ -12,43 +12,23 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// const form = document.querySelector('#wordArtForm');
-// form.addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   const name = document.querySelector('#name').value;
-//   const message = document.querySelector('#message').value;
-//   const textColor = document.querySelector('#textColor').value;
-
-//   // Update the preview
-//   const wordArtPreview = document.querySelector('#wordArtPreview');
-//   wordArtPreview.innerHTML = `${name}: ${message}`;
-//   wordArtPreview.style.color = textColor;
-//   wordArtPreview.classList.remove('active');
-//   setTimeout(() => wordArtPreview.classList.add('active'), 10);
-
-//   // Save data to Firebase
-//   app.database().ref('wordArt').push({
-//     name: name,
-//     message: message,
-//     textColor: textColor
-//   });
-// });
-
-// Display saved word art in the gallery
-firebase.database().ref('Stories').on('child_added', function(snapshot) {
-  const wordArt = snapshot.val();
-  console.log(snapshot.val());
-  const wordArtItem = document.createElement('div');
-  wordArtItem.classList.add( 'text-center', 'word-art-item');
-  wordArtItem.innerHTML = `
-
-      <h3>${wordArt.name}   (${wordArt.age_range})</h3>
-
-      ${wordArt.description}
-      ${wordArt.age_range}
+firebase.database().ref('Stories').orderByChild('name').on('child_added', function(snapshot) {
+  const story = snapshot.val();
+  const storyItem = document.createElement('div');
+  storyItem.classList.add('story-item');
+  storyItem.innerHTML =` 
+      <a href="selectedStory.html?id=${story.id}" ><h3 id="${story.id}">${story.name}   (${story.age_range})</h3></a>
+      <h2>${story.icon}</h2>
+      <p>${story.description}</p>
+    <div style="display:none">${story.description}
+      ${story.age_range}
+    </div>
+      
 
    
-  `;
-  document.querySelector('#wordArtGallery').appendChild(wordArtItem);
+  `
+
+  // Append the story item to the div
+  document.querySelector('#storyGallery').appendChild(storyItem);
 });
+
