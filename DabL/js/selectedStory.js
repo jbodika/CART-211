@@ -58,7 +58,7 @@ if (storyId) {
 
             <p style="display:none" id="choiceOuctome5">${story.ChoiceOutcomes.choice5}</p>
             <p  style="display:none" id="choiceOuctome6">${story.ChoiceOutcomes.choice6}</p>
-            <input  class="choice-option"style="display:none" type="button" id="choice7" value="${story.Choices.choice7}"/>
+            <input class="choice-option"style="display:none" type="button" id="choice7" value="${story.Choices.choice7}"/>
             <input  class="choice-option"style="display:none" type="button" id="choice8" value="${story.Choices.choice8}"/>
            
             <p style="display:none" id="choiceOuctome7">${story.ChoiceOutcomes.choice7}</p>
