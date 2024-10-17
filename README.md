@@ -1,7 +1,7 @@
 # DabL
 Jolene Bodika
 
-## [View the project online](https://jbodika.github.io/CART-211/Assignments/DabL/)
+## [View the project online](https://jbodika.github.io/CART-211/DabL/)
 
 ## Description
 DabL is an interactive storybook website designed to engage children aged 8-14 in reading, play, and critical thinking. With DabL, children immerse themselves in unique environments and explore how they would react in various situations, fostering creativity and problem-solving skills.
